@@ -12,14 +12,16 @@
 <div id="root"></div>
 <style type='text/css'>
 	.embeddedServiceHelpButton .helpButton .uiButton {
-		background-color: #005290;
-		font-family: "Arial", sans-serif;
+		background-color: #FF6432;
+		font-family: "Salesforce Sans", sans-serif;
 	}
 	.embeddedServiceHelpButton .helpButton .uiButton:focus {
-		outline: 1px solid #005290;
+		outline: 1px solid #FF6432;
 	}
-	body{
-	    background-image: url("https://img.freepik.com/premium-vector/chat-bot-vector-logo-design-concept_418020-241.jpg");
+	@font-face {
+		font-family: 'Salesforce Sans';
+		src: url('https://c1.sfdcstatic.com/etc/clientlibs/sfdc-aem-master/clientlibs_base/fonts/SalesforceSans-Regular.woff') format('woff'),
+		url('https://c1.sfdcstatic.com/etc/clientlibs/sfdc-aem-master/clientlibs_base/fonts/SalesforceSans-Regular.ttf') format('truetype');
 	}
 </style>
 
@@ -27,7 +29,7 @@
 <script type='text/javascript'>
 	var initESW = function(gslbBaseURL) {
 		embedded_svc.settings.displayHelpButton = true; //Or false
-		embedded_svc.settings.language = ''; //For example, enter 'en' or 'en-US'
+		embedded_svc.settings.language = 'pt-BR'; //For example, enter 'en' or 'en-US'
 
 		//embedded_svc.settings.defaultMinimizedText = '...'; //(Defaults to Chat with an Expert)
 		//embedded_svc.settings.disabledMinimizedText = '...'; //(Defaults to Agent Offline)
@@ -48,17 +50,17 @@
 		embedded_svc.settings.entryFeature = 'LiveAgent';
 
 		embedded_svc.init(
-			'https://evolua--homolog.sandbox.my.salesforce.com',
-			'https://evolua--homolog.sandbox.my.site.com/evoluaclientes',
+			'https://evolua--developer.sandbox.my.salesforce.com',
+			'https://evolua--developer.sandbox.my.site.com/evoluaclientes',
 			gslbBaseURL,
-			'00D89000000deNN',
-			'ChatBot',
+			'00D88000000UZ0L',
+			'Comercial',
 			{
 				baseLiveAgentContentURL: 'https://c.la2s-core1.sfdc-xwy4ub.salesforceliveagent.com/content',
-				deploymentId: '5722E000000c0pd',
-				buttonId: '5732E000000LTza',
+				deploymentId: '5722E000000c0pY',
+				buttonId: '573Ia000000003d',
 				baseLiveAgentURL: 'https://d.la2s-core1.sfdc-xwy4ub.salesforceliveagent.com/chat',
-				eswLiveAgentDevName: 'EmbeddedServiceLiveAgent_Parent04I8900000002jNEAQ_18af6ff3fcd',
+				eswLiveAgentDevName: 'Comercial',
 				isOfflineSupportEnabled: false
 			}
 		);
@@ -66,7 +68,7 @@
 
 	if (!window.embedded_svc) {
 		var s = document.createElement('script');
-		s.setAttribute('src', 'https://evolua--homolog.sandbox.my.salesforce.com/embeddedservice/5.0/esw.min.js');
+		s.setAttribute('src', 'https://evolua--developer.sandbox.my.salesforce.com/embeddedservice/5.0/esw.min.js');
 		s.onload = function() {
 			initESW(null);
 		};
