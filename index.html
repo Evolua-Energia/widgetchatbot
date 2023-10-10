@@ -10,17 +10,18 @@
   You need to enable JavaScript to run this app.
 </noscript>
 <div id="root"></div>
+	
+	<style>
+	    .embeddedServiceHelpButton .helpButton .uiButton {
+		background-color: #ff6731;
+		font-family: Arial,sans-serif
+	    }
+	
+	    .embeddedServiceHelpButton .helpButton .uiButton:focus {
+		outline: 1px solid #ff6731
+	    }
+	</style>
 	<!-- 
-<style>
-            .embeddedServiceHelpButton .helpButton .uiButton {
-                background-color: #ff6731;
-                font-family: Arial,sans-serif
-            }
-
-            .embeddedServiceHelpButton .helpButton .uiButton:focus {
-                outline: 1px solid #ff6731
-            }
-        </style>
         <script type="text/javascript" src="https://service.force.com/embeddedservice/5.0/esw.min.js"></script>
         <script type="text/javascript">
             var initESW = function(e) {
